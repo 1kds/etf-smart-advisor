@@ -1,0 +1,26 @@
+# 환경 변수 및 보안 키 (절대 커밋 금지!)
+.env
+.env.*
+*.env
+
+# Python 캐시 파일
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+
+# 가상환경
+venv/
+.venv/
+env/
+
+# IDE 및 OS 시스템 파일
+.DS_Store
+desktop.ini
+.vscode/
+.idea/
+
+# 로그 및 임시 파일
+*.log
+*.tmp
+tmp/
