@@ -22,6 +22,7 @@
 - ⚖️ **답변 검증**: 불완전판매 위반 표현(단정적 수익 보장 표현) 감지 및 투자 유의사항 고지문 자동 결합.
 - 📄 **출처 명시**: 답변 하단에 근거 문서명과 정확한 페이지 번호(`p.N`) 자동 표시.
 - 📋 **감사 로그(Audit Trail)**: 입력/출력 검증 기록 세션 관리 및 CSV 다운로드 기능 제공.
+- 🔐 **클라우드 자격증명 보안 (AWS SSM Parameter Store)**: API Key 평문 노출 방지를 위해 `SecureString` 암호화 저장소를 연동하고 ECS `secrets` 주입 아키텍처 구현.
 
 ---
 
@@ -35,6 +36,7 @@
        │
        ▼
 [ AWS ECS Fargate (Serverless Container 실행 엔진) ]
+       ├── AWS SSM Parameter Store (SecureString 암호화 키 동적 주입)
        ├── Streamlit (UI Framework)
        ├── LangChain (RAG Orchestration)
        ├── FAISS (Vector Store)
@@ -68,7 +70,7 @@
 
 1. **저장소 클론 및 이동**
    ```bash
-   git clone <your-repository-url>
+   git clone https://github.com/1kds/etf-smart-advisor.git
    cd 3주차_프로토타입_김동성
    ```
 
